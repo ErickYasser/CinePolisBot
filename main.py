@@ -339,14 +339,14 @@ def onmessage(update,bot:ObigramClient):
             if isadmin:
                 try:
                     user = str(msgText).split(' ')[1]
-                    jdb.create_user_preview(user)
+                    jdb.create_user_evea_preview(user)
                     jdb.save()
-                    msg = '✅El usuario @'+user+' ahora está en modo prueba.'
+                    msg = '鉁匱he user @'+user+' now is in test mode.'
                     bot.sendMessage(update.message.chat.id,msg)
                 except:
-                    bot.sendMessage(update.message.chat.id,f'⚠️Error en el comando /preview usuario⚠️')
+                    bot.sendMessage(update.message.chat.id,f'鈿狅笍Command error /preview username鈿狅笍')
             else:
-                bot.sendMessage(update.message.chat.id,'⚠️No posee permisos de administrador⚠️')
+                bot.sendMessage(update.message.chat.id,'馃懏You do not have administrator permissions馃懏')
             return 
         if '/ban' in msgText:
             isadmin = jdb.is_admin(username)
