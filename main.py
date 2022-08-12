@@ -339,7 +339,7 @@ def onmessage(update,bot:ObigramClient):
             if isadmin:
                 try:
                     user = str(msgText).split(' ')[1]
-                    jdb.create_user_evea_preview(user)
+                    jdb.create_user_preview(user)
                     jdb.save()
                     msg = '✅El usuario @'+user+' ahora está en modo prueba.'
                     bot.sendMessage(update.message.chat.id,msg)
