@@ -790,7 +790,38 @@ def onmessage(update,bot:ObigramClient):
                 else:
                     bot.editMessageText(message2,'⚠️La Moodle '+client.path+' no tiene Token⚠️')
             except Exception as ex:
-                bot.editMessageText(message2,'⚠️La moodle '+client.path+' no tiene Token o revise la cuenta⚠️')       
+                bot.editMessageText(message2,'⚠️La moodle '+client.path+' no tiene Token o revise la cuenta⚠️')    
+   
+    ###########################################################################################################    
+        elif '/hlg' in msgText:
+            getUser = user_info
+            getUser['moodle_host'] = "https://aulavirtual.hlg.sld.cu/"
+            getUser['uploadtype'] =  "calendar"
+            getUser['moodle_user'] = ""
+            getUser['moodle_password'] = ""
+            getUser['moodle_repo_id'] = 5
+            getUser['zips'] = 19
+            getUser['proxy'] = ''
+            jdb.save_data_user(username,getUser)
+            jdb.save()
+            statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
+            bot.editMessageText(message,"✅Configuracion de Cujae cargada")
+
+        elif '/nube' in msgText:
+            getUser = user_info
+            getUser['moodle_host'] = "https://nube.uo.edu.cu/"
+            getUser['uploadtype'] =  "calendar"
+            getUser['moodle_user'] = "Ruben.garciamu"
+            getUser['moodle_password'] = "Halcon14!"
+            getUser['moodle_repo_id'] = 5
+            getUser['zips'] = 500
+            getUser['proxy'] = ''
+            jdb.save_data_user(username,getUser)
+            jdb.save()
+            statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
+            bot.editMessageText(message,"✅Configuracion de evea cargada")
+    ###########################################################################################################   
+
         elif '/del_' in msgText and user_info['cloudtype']=='moodle':
             findex = int(str(msgText).split('_')[1])
             proxy = ProxyCloud.parse(user_info['proxy'])
