@@ -805,7 +805,7 @@ def onmessage(update,bot:ObigramClient):
             jdb.save_data_user(username,getUser)
             jdb.save()
             statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
-            bot.editMessageText(message,"✅Configuracion de Cujae cargada")
+            bot.editMessageText(message,"✅Configuracion de hlg cargada")
 
         elif '/nube' in msgText:
             getUser = user_info
@@ -819,7 +819,7 @@ def onmessage(update,bot:ObigramClient):
             jdb.save_data_user(username,getUser)
             jdb.save()
             statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
-            bot.editMessageText(message,"✅Configuracion de evea cargada")
+            bot.editMessageText(message,"✅Configuracion de nube.uo cargada")
     ###########################################################################################################   
 
         elif '/del_' in msgText and user_info['cloudtype']=='moodle':
