@@ -811,8 +811,10 @@ def onmessage(update,bot:ObigramClient):
             getUser = user_info
             getUser['moodle_host'] = "https://nube.uo.edu.cu/"
             getUser['uploadtype'] =  "calendar"
-            getUser['moodle_user'] = "Ruben.garciamu"
-            getUser['moodle_password'] = "Halcon14!"
+            getUser['cloudtype'] =  "cloud"
+            getUser['dir'] =  "New"
+            getUser['moodle_user'] = ""
+            getUser['moodle_password'] = ""
             getUser['moodle_repo_id'] = 5
             getUser['zips'] = 500
             getUser['proxy'] = ''
