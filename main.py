@@ -812,7 +812,7 @@ def onmessage(update,bot:ObigramClient):
             getUser['moodle_host'] = "https://nube.uo.edu.cu/"
             getUser['uploadtype'] =  "calendar"
             getUser['cloudtype'] =  "cloud"
-            getUser['dir'] =  "New"
+            getUser['dir'] =  "New/"
             getUser['moodle_user'] = ""
             getUser['moodle_password'] = ""
             getUser['moodle_repo_id'] = 5
