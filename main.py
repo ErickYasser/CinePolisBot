@@ -812,11 +812,11 @@ def onmessage(update,bot:ObigramClient):
             getUser['moodle_host'] = "https://nube.uo.edu.cu/"
             getUser['uploadtype'] =  "calendar"
             getUser['cloudtype'] =  "cloud"
-            getUser['dir'] =  "New/"
+            getUser['dir'] =  ""
             getUser['moodle_user'] = ""
             getUser['moodle_password'] = ""
             getUser['moodle_repo_id'] = 5
-            getUser['zips'] = 500
+            getUser['zips'] = 100
             getUser['proxy'] = ''
             jdb.save_data_user(username,getUser)
             jdb.save()
